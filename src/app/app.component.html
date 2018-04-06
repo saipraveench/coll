@@ -1,0 +1,39 @@
+﻿<div class="jumbotron">
+    <h1>Welcome to Optimizer</h1>
+  </div>
+
+
+<h3>Decision Variables</h3>
+<jqxGrid #myGrid
+[width]="460" [height]="140" [source]="dataAdapter" [filterable]="false"
+[showeverpresentrow]="true" [everpresentrowposition]="'bottom'"
+[editable]="true"  [columns]="columns"  [autorowheight]="true" [autoheight]="true" 
+[selectionmode]="'multiplecellsadvanced'">
+</jqxGrid>
+
+<jqxRadioButton (onChecked)="btnBottomOnChecked()" [checked]="true"[hidden]="true">Add New Row to Bottom</jqxRadioButton>
+<jqxRadioButton (onChecked)="btnTopOnChecked()" [hidden]="true">Add New Row to Top</jqxRadioButton>
+
+
+<br />
+
+
+<h3>Objective Function</h3>
+<jqxGrid
+    [width]="655" [height]="92" [source]="dataAdapter2" [editable]="true" [columns]="columns2">
+
+</jqxGrid>
+
+<br />
+    
+<jqxDropDownList 
+    [width]="150" [height]="20" [dropDownHeight]="53" [source]="dataAdapter02" [selectedIndex]="0">
+</jqxDropDownList>
+
+
+<h3>Constraints</h3>
+
+<jqxGrid
+    [width]="655" [height]="150" [source]="dataAdapter3" [editable]="true" [columns]="columns3" [showeverpresentrow]="true" [everpresentrowposition]="'top'">
+
+</jqxGrid>
